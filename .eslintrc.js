@@ -17,5 +17,16 @@ module.exports = {
     'react/prop-types': 'off',
     'react/no-unused-prop-types': 'off',
     'react/require-default-props': 'off',
+    'jsx-a11y/label-has-associated-control': [
+      'error',
+      {
+        labelComponents: [],
+        labelAttributes: [],
+        controlComponents: [],
+        assert: 'either',
+        depth: 25,
+      },
+    ],
+    'react/jsx-props-no-spreading': 'off',
   },
 };

@@ -27,14 +27,34 @@ const config: Configuration = {
     filename: 'bundle.js',
   },
   plugins: [
-    new CopyPlugin([{ from: 'styles/**/*.css', to: 'css', flatten: true }]),
+    new CopyPlugin([
+      { from: 'styles/**/*.css', to: 'css', flatten: true },
+      {
+        from: 'node_modules/todomvc-common/base.css',
+        to: 'css/todomvc-common.css',
+      },
+      {
+        from: 'node_modules/todomvc-app-css/index.css',
+        to: 'css/todomvc-app-css.css',
+      },
+      {
+        from: 'node_modules/todomvc-common/base.js',
+        to: 'todomvc-common.js',
+      },
+    ]),
     new HtmlWebpackPlugin(
-      process.env.NODE_ENV === 'test' ? {
-        base: `file://${__dirname}/dist/`,
-        template: 'src/index.ejs',
-      } : { template: 'src/index.ejs' },
+      process.env.NODE_ENV === 'test'
+        ? {
+            base: `file://${__dirname}/dist/`,
+            template: 'src/index.ejs',
+          }
+        : { template: 'src/index.ejs' }
     ),
-    new HtmlWebpackTagsPlugin({ tags: ['custom.css'], append: true, publicPath: '/css' }),
+    new HtmlWebpackTagsPlugin({
+      tags: ['custom.css'],
+      append: true,
+      publicPath: '/css',
+    }),
   ],
 };
 

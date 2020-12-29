@@ -1,11 +1,16 @@
-import * as React from 'react';
+import React from 'react';
+
+import { HashRouter } from 'react-router-dom';
+import Header from './header';
+import Main from './main';
+import Footer from './footer';
 
 export default () => (
-  <div className='container h-100'>
-    <div className='row h-100 align-items-center justify-content-center'>
-      <div className='col-auto'>
-        <h1 className='engraved'>Hello, world!</h1>
-      </div>
-    </div>
-  </div>
+  <HashRouter>
+    <section className='todoapp'>
+      <Header />
+      <Main />
+      <Footer />
+    </section>
+  </HashRouter>
 );
