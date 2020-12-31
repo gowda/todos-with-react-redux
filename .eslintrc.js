@@ -28,5 +28,14 @@ module.exports = {
       },
     ],
     'react/jsx-props-no-spreading': 'off',
+    '@typescript-eslint/no-unused-vars': [
+      'error',
+      {
+        vars: 'all',
+        args: 'after-used',
+        argsIgnorePattern: '^_',
+        ignoreRestSiblings: false,
+      },
+    ],
   },
 };

@@ -50,8 +50,8 @@ export default (state = initialState, action: Action): State => {
     case DELETE_TODO:
       return state.filter(({ id }) => id !== action.payload);
     case MARK_ALL_AS_DONE:
-      return state.map(({ completed, ...rest }) => ({
-        ...rest,
+      return state.map((todo) => ({
+        ...todo,
         completed: true,
       }));
     case DELETE_COMPLETED:
