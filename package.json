@@ -8,7 +8,8 @@
     "build": "webpack --require ts-node/register --mode production --config webpack.production.ts",
     "start": "webpack-dev-server --require ts-node/register --mode development --config webpack.development.ts",
     "test": "jest",
-    "cypress": "cypress run"
+    "cypress": "cypress run",
+    "features": "start-server-and-test http://localhost:3000 cypress"
   },
   "keywords": [],
   "repository": "github:gowda/react.ts.template",
@@ -53,6 +54,7 @@
     "html-webpack-tags-plugin": "^2.0.17",
     "jest": "^25.5.4",
     "source-map-loader": "^0.2.4",
+    "start-server-and-test": "^1.11.7",
     "ts-loader": "^7.0.5",
     "ts-node": "^8.10.2",
     "typescript": "^3.9.7",

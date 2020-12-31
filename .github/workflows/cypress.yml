@@ -21,4 +21,4 @@ jobs:
           node-version: 12.x
       - run: npm ci
       - name: Run cypress tests
-        run: npm run cypress
+        run: npm run features
