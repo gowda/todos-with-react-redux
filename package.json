@@ -12,7 +12,7 @@
     "features": "start-server-and-test http://localhost:3000 cypress"
   },
   "keywords": [],
-  "repository": "github:gowda/react.ts.template",
+  "repository": "github:gowda/todos-with-react-redux",
   "author": "Basavanagowda Kanur <basavanagowda@gmail.com>",
   "license": "Beerware",
   "devDependencies": {
