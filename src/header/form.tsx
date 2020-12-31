@@ -21,7 +21,9 @@ const Component = ({ onSubmit }: Props) => {
       }
       onKeyPress={(e) => {
         if (e.key === 'Enter') {
-          onSubmit(content);
+          if (content.trim().length !== 0) {
+            onSubmit(content.trim());
+          }
           setContent('');
         }
       }}

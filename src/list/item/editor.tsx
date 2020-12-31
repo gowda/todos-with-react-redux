@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-autofocus */
 import React, { useState } from 'react';
 
 interface Props {
@@ -21,12 +22,17 @@ export default ({ completed, content, onCancel, onSubmit }: Props) => {
         onBlur={() => onCancel()}
         onKeyDown={(e) => {
           if (e.key === 'Enter') {
-            onSubmit(localContent);
+            if (localContent.trim().length !== 0) {
+              onSubmit(localContent.trim());
+            } else {
+              onSubmit(content);
+            }
           } else if (e.key === 'Escape') {
             setLocalContent(content);
             onCancel();
           }
         }}
+        autoFocus
       />
     </li>
   );

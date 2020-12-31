@@ -2,18 +2,7 @@ import { Todo } from './types';
 
 export type State = Todo[];
 
-const initialState: State = [
-  {
-    id: 1,
-    content: 'Taste JavaScript',
-    completed: true,
-  },
-  {
-    id: 2,
-    content: 'Buy a unicorn',
-    completed: false,
-  },
-];
+const initialState: State = [];
 
 export const ADD_TODO = 'todos/ADD_TODO';
 export const TOGGLE_TODO_COMPLETION = 'todos/TOGGLE_TODO_COMPLETION';
