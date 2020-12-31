@@ -1,7 +1,7 @@
 # react.ts.template
 
-![](https://github.com/gowda/react.ts.template/workflows/lint-and-tests/badge.svg)
-![](https://github.com/gowda/react.ts.template/workflows/cypress/badge.svg)
+![](https://github.com/gowda/todos-with-react-redux/workflows/lint-and-tests/badge.svg)
+![](https://github.com/gowda/todos-with-react-redux/workflows/cypress/badge.svg)
 
 [TodoMVC](http://todomvc.com/) implementation using react-redux
 
