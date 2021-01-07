@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Form from './form';
+import Form from './form-container';
 
 export default () => (
   <header className='header'>

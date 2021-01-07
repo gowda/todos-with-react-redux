@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import Counter from './counter';
-import Navigation from './navigation';
-import ClearCompletedButton from './clear-completed-button';
+import Counter from './counter-container';
+import Navigation from '../components/navigation';
+import ClearCompletedButton from './clear-completed-button-container';
 import { State } from '../reducer';
 
 interface Props {

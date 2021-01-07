@@ -1,16 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { connect } from 'react-redux';
 import { useLocation } from 'react-router-dom';
-import { State } from '../reducer';
 
-import { Todo } from '../types';
-import Item from './item';
+import { Todo } from '../../types';
+import Item from '../../item-container';
 
 interface Props {
   items: Todo[];
 }
 
-const Component = ({ items }: Props) => {
+export default ({ items }: Props) => {
   const location = useLocation();
   const [filteredItems, setFilteredItems] = useState<Todo[]>(items);
 
@@ -34,9 +32,3 @@ const Component = ({ items }: Props) => {
     </ul>
   );
 };
-
-const mapState = (state: State) => ({
-  items: state,
-});
-
-export default connect(mapState)(Component);

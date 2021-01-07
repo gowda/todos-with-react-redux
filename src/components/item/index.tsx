@@ -1,17 +1,10 @@
 import React, { useState } from 'react';
 
-import { Dispatch } from 'redux';
-import { connect } from 'react-redux';
 import { Todo } from '../../types';
 import View from './view';
 import Editor from './editor';
-import {
-  DELETE_TODO,
-  TOGGLE_TODO_COMPLETION,
-  UPDATE_TODO,
-} from '../../reducer';
 
-type OwnProps = Todo;
+export type OwnProps = Todo;
 
 type Props = OwnProps & {
   onChange: (value: string) => void;
@@ -19,7 +12,7 @@ type Props = OwnProps & {
   onToggleCompletion: () => void;
 };
 
-const Component = ({
+export default ({
   id,
   completed,
   content,
@@ -54,13 +47,3 @@ const Component = ({
     </>
   );
 };
-
-const mapDispatch = (dispatch: Dispatch, { id }: OwnProps) => ({
-  onChange: (value: string) =>
-    dispatch({ type: UPDATE_TODO, payload: { id, content: value } }),
-  onToggleCompletion: () =>
-    dispatch({ type: TOGGLE_TODO_COMPLETION, payload: id }),
-  onDelete: () => dispatch({ type: DELETE_TODO, payload: id }),
-});
-
-export default connect(null, mapDispatch)(Component);

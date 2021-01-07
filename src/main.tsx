@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import List from './list';
-import MarkAllAsComponentButton from './mark-all-as-complete-button';
+import List from './list-container';
+import MarkAllAsComponentButton from './mark-all-as-complete-button-container';
 import { State } from './reducer';
 
 interface Props {
