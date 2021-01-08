@@ -1,4 +1,4 @@
-# react.ts.template
+# todos-with-react-redux
 
 ![](https://github.com/gowda/todos-with-react-redux/workflows/eslint/badge.svg)
 ![](https://github.com/gowda/todos-with-react-redux/workflows/cypress/badge.svg)
