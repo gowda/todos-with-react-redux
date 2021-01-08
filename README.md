@@ -6,9 +6,6 @@
 [TodoMVC](http://todomvc.com/) implementation using react-redux
 
 ## Usage
-
-`react-app` is assumed as name of the application to be created.
-
 #### Clone the repository
 
 ```bash
