@@ -6,6 +6,7 @@
 [TodoMVC](http://todomvc.com/) implementation using react-redux
 
 ## Usage
+
 #### Clone the repository
 
 ```bash
@@ -42,7 +43,7 @@ Configuratin is in [.eslintrc.js](.eslintrc.js)
 #### Run integration tests
 
 ```bash
-$ npm run cypress
+$ npm run features
 ```
 
 ## License
